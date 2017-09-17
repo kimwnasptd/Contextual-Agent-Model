@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from rasa_nlu.model import Metadata, Interpreter
 from rasa_nlu.config import RasaNLUConfig
 
-MODEL_DIR = "Agent/models/model_001"
+MODEL_DIR = "Agent/models/linda_001"
 CONFIG_DIR = "Agent/config_spacy.json"
 
 
@@ -147,9 +147,9 @@ class AgentModel():
     contexts_info = {}
     fallback_responses = []
 
-    active_contexts = {'kimonas': {} }
+    active_contexts = {}
     incomplete_intents_stack = []
-    requests_num = {'kimonas': 0}
+    requests_num = {}
 
     def __init__(self, model_dir=MODEL_DIR, conf_file=CONFIG_DIR):
         # Takes some time,to initialize
@@ -170,6 +170,23 @@ class AgentModel():
         print("")
 
         self.modelInterpreter = interpreter
+
+    def handle_user_request(self, user_id):
+        ''' Misleading name, checks if the needed dicts have entries
+            for the given user_id. Also handles the request_num '''
+
+        # Check if the required entries for specific user_id exists in dicts
+        if user_id not in self.requests_num:
+            self.requests_num[user_id] = 0
+        if user_id not in self.active_contexts:
+            self.active_contexts[user_id] = {}
+
+        # If there are no active contexts then reset the requests_num counter
+        if not self.active_contexts[user_id]:
+            self.requests_num[user_id] = 0
+
+        # Increase the requests_num counnter
+        self.requests_num[user_id] += 1
 
     def assign_active_contexts(self, user_id):
         ''' Updates the "active_contexts" entry in all active contexts '''
@@ -201,7 +218,7 @@ class AgentModel():
             context_time_created = datetime.strptime(self.active_contexts[user_id][context]['time_created'], "%Y-%m-%d %H:%M:%S")
 
             time_condition = datetime.now() - context_time_created <= timedelta(minutes=lifespan[0])
-            request_condition = self.requests_num[user_id] - self.active_contexts[user_id][context]['request_num'] <= lifespan[1]
+            request_condition = self.requests_num[user_id] - self.active_contexts[user_id][context]['request_num'] < lifespan[1]
 
             # If one of the two condition is False then remove the given intent/context
             if not (time_condition and request_condition):
@@ -214,6 +231,10 @@ class AgentModel():
 
             # Correct the active contexts entry in all active contexts
             self.assign_active_contexts(user_id)
+
+            # If there are no active contexts then reset the requests_num counter
+            if not self.active_contexts[user_id]:
+                self.requests_num[user_id] = 1
 
     def apply_intent_action(self, intent, analyzed_text, user_id):
         ''' This is the part were the 'fullfillment is happening.
@@ -324,14 +345,17 @@ class AgentModel():
 
     def getResponse(self, input_text, user_id='kimonas'):
 
+        # Makes sure the user_id exists and updates the requests_num
+        self.handle_user_request(user_id)
+
+        # Update the Active Contexts and the Incomplete Intents Stack
+        self.update_active_contexts(user_id)
+
         analyzed_text = self.modelInterpreter.parse(input_text)
         analyzed_text = reformResult(analyzed_text, self.requests_num[user_id])
 
         # Info of the given Intent
         intent = self.intents_info[analyzed_text['intents']['name']]
-
-        # Update the Active Contexts and the Incomplete Intents Stack
-        self.update_active_contexts(user_id) # To-do
 
         # Check if the given intent is out of context
         if self.out_of_context(intent, user_id):
