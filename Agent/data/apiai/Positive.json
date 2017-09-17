@@ -1,0 +1,157 @@
+{
+  "userSays": [
+    {
+      "id": "c8f2943a-542b-4d58-94f7-428fef5c83f3",
+      "data": [
+        {
+          "text": "nice, keep it up"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9693336e-dfc6-4baa-8bf2-66cd756fb6c2",
+      "data": [
+        {
+          "text": "good job"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e8d64456-2c47-499a-b16b-5d7d0788ebf3",
+      "data": [
+        {
+          "text": "well done"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3464bdd4-2222-41e2-9ea8-2ceab2b252c9",
+      "data": [
+        {
+          "text": "don\u0027t stop"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b0b044c8-9e83-41f2-9c41-54318607ff49",
+      "data": [
+        {
+          "text": "nice"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fb1e96ae-69fd-412a-8f26-620492a5824c",
+      "data": [
+        {
+          "text": "good"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "652a5b4d-75f3-4bba-ab6c-b3734c88e255",
+      "data": [
+        {
+          "text": "positive"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d55da707-9a73-45a1-9c28-fd8113bbb3e9",
+      "data": [
+        {
+          "text": "yes, don\u0027t stop"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "02d91a29-8287-4fac-9ea1-0eb5500ed953",
+      "data": [
+        {
+          "text": "yes, dont stop"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2e77210b-f244-4ea2-8432-b37bd954ad98",
+      "data": [
+        {
+          "text": "yes, keep it up"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9aab48bc-5b86-4cb2-ae42-2b5f9196ad07",
+      "data": [
+        {
+          "text": "continue"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c0e51691-6c27-4da0-b976-89d4dabc8bba",
+      "data": [
+        {
+          "text": "of course"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ab74cd69-34af-46d7-a273-37ca9e77c1f5",
+      "data": [
+        {
+          "text": "yes"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "6fef3533-4d3e-4dab-81b5-4b0765786352",
+  "name": "Positive",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

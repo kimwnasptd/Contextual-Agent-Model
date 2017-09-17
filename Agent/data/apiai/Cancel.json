@@ -1,0 +1,186 @@
+{
+  "userSays": [
+    {
+      "id": "9f1ed52b-cf26-4210-86fc-3cdb2278635e",
+      "data": [
+        {
+          "text": "stop what you are doing"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7225d85c-9447-4e3e-aa75-aa50ca9e38c8",
+      "data": [
+        {
+          "text": "forget what you are doing"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e4495e8f-667c-43c8-be43-e50edcfe14f6",
+      "data": [
+        {
+          "text": "Forget it"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "77968aa9-edb9-4d16-bf02-5e934e744c52",
+      "data": [
+        {
+          "text": "Don\u0027t do what you do anymore"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f46ea48f-6f5d-457d-880b-fee3622580f4",
+      "data": [
+        {
+          "text": "Stop whatever you are doing"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3c5c8a1a-fff1-4820-843f-9f39ce20d4c3",
+      "data": [
+        {
+          "text": "Drop it"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "eb998383-aa71-4b7d-9693-f9cde7458512",
+      "data": [
+        {
+          "text": "Stop"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0eb4cad6-c9c7-42b1-b10c-c00663b1bcfb",
+      "data": [
+        {
+          "text": "Don\u0027t "
+        },
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " it"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3272dfa7-5672-42b3-999c-dcdb1af64b05",
+      "data": [
+        {
+          "text": "Nevermind"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "22e2f0c1-c49f-4084-ba4a-77f9a37239a8",
+      "data": [
+        {
+          "text": "Abort"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "eceb12b5-be18-4f4f-92e9-e690e06f0113",
+      "data": [
+        {
+          "text": "Cancel that"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7ad6fd6b-b6e1-46e5-8b80-dbabf42cb280",
+      "data": [
+        {
+          "text": "Changed my mind"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b1a8b7f0-5642-4a08-a9d5-1e18f04293c7",
+      "data": [
+        {
+          "text": "Never mind"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "9264727c-2932-40cd-b1f3-e1355fd47e65",
+  "name": "Cancel",
+  "auto": true,
+  "contexts": [
+    "adding-event"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "adding-event",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "idle",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Canceling it right now"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

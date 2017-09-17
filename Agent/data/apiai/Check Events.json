@@ -1,0 +1,427 @@
+{
+  "userSays": [
+    {
+      "id": "70834666-123e-4a5c-af9b-4833d22e83cd",
+      "data": [
+        {
+          "text": "assignments",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6953af27-6ba1-4563-a24d-e0c05d32b4af",
+      "data": [
+        {
+          "text": "What\u0027s going on "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "303e4faa-fffe-4912-ad69-aebc6a1bb260",
+      "data": [
+        {
+          "text": "What\u0027s the deal "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7709f7c9-1186-4c64-bf55-b1597762498e",
+      "data": [
+        {
+          "text": "Is there anything for "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8ab9cefe-b224-4789-9525-3d7879f8e31c",
+      "data": [
+        {
+          "text": "Events for today"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c81b9f43-db77-481f-ac15-58ce02fb160a",
+      "data": [
+        {
+          "text": "Appointments",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "ced198d1-c12b-4a2c-b387-493093dacf5b",
+      "data": [
+        {
+          "text": "Any "
+        },
+        {
+          "text": "meetings",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "this week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9ad2adfb-bbab-48f8-8f33-4de8f279c5ec",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "assignments",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " do "
+        },
+        {
+          "text": "I have",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "this month",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "34e889a1-a0a6-443c-9671-be1a5bd5de65",
+      "data": [
+        {
+          "text": "What are my "
+        },
+        {
+          "text": "assignments",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "the week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fe5e1498-87dc-4bf2-953f-52f612ad2a34",
+      "data": [
+        {
+          "text": "Who do I have to see "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a547a662-96a6-4ea9-9a74-792a933e0e8f",
+      "data": [
+        {
+          "text": "How busy am I "
+        },
+        {
+          "text": "this week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d6ee5c88-003d-49ff-96ff-7040f00afcd8",
+      "data": [
+        {
+          "text": "Do "
+        },
+        {
+          "text": "I have the",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " day off "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5b330d47-1fc1-4d88-afbf-f7de663b4ac2",
+      "data": [
+        {
+          "text": "Do "
+        },
+        {
+          "text": "I have",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " anything for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "7d0020cd-a87e-4c5a-a82a-7848d3d5204a",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "classes",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " do I have to "
+        },
+        {
+          "text": "attend",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "this week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1bd7bf98-7195-49b5-a1e8-7d9826824951",
+      "data": [
+        {
+          "text": "What are my "
+        },
+        {
+          "text": "appointments",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "the next week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "84e57c1c-4ffa-429d-bc88-686bbce64c10",
+      "data": [
+        {
+          "text": "What\u0027s the plans for "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6770dbfe-65fb-4e9b-955b-c3470524ede5",
+      "data": [
+        {
+          "text": "What do "
+        },
+        {
+          "text": "I have",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " to do for "
+        },
+        {
+          "text": "this week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "7967b424-7517-431e-8b61-8e52996fd434",
+  "name": "Check Events",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "checkEvents",
+      "affectedContexts": [
+        {
+          "name": "checking-events",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@eventType",
+          "name": "eventType",
+          "value": "$eventType",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

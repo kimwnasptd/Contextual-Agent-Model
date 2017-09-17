@@ -1,0 +1,1235 @@
+{
+  "userSays": [
+    {
+      "id": "effa24dc-c753-494c-b59d-223b399f1ed7",
+      "data": [
+        {
+          "text": "@action @eventType"
+        }
+      ],
+      "isTemplate": true,
+      "count": 1
+    },
+    {
+      "id": "ba23d3f1-7226-4ec5-a7ca-c2969349e218",
+      "data": [
+        {
+          "text": "@action @eventType on @subject for @sys.date"
+        }
+      ],
+      "isTemplate": true,
+      "count": 0
+    },
+    {
+      "id": "1714050c-b7e9-4e3c-8ae2-efee1a53d7f7",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for right now"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "26b59674-55c0-4f7c-ac53-f94e9a2e5644",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "lab",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "advanced physics",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "6038be89-81df-4d33-bda8-6f5da26d8251",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "exercise",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " until "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "41e8adbd-f634-4c61-98b2-57b2c9437f8d",
+      "data": [
+        {
+          "text": "put",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " another "
+        },
+        {
+          "text": "exercise",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "operating systems",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "until next Sunday",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bf70cde4-4113-40b4-9790-412255e45c11",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "meeting",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "artificial intelligence",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Saturday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ab95cac0-727e-49b4-ba4d-f76edbab782e",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "programming languages",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Friday next week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0d634639-283f-45c6-bda1-5d51b7b91933",
+      "data": [
+        {
+          "text": "Can you "
+        },
+        {
+          "text": "set up",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " another "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "databases",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "next week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8540ad38-d264-48bc-99d2-0521a136daa6",
+      "data": [
+        {
+          "text": "Put",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " another "
+        },
+        {
+          "text": "exercise",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "architecture",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9e8db343-b0b6-41f2-8d40-2768895cab39",
+      "data": [
+        {
+          "text": "Add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "computer science",
+          "alias": "subject",
+          "meta": "@subject",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "next Friday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "13c40972-d9c3-4d79-aca0-308f9cbf72c6",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "class",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "morning at nine",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "fd6e8489-45d5-4af6-aeb7-da04cfac8c68",
+      "data": [
+        {
+          "text": "I have a",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "meeting",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "Gregory",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "at Saturday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "evening",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "at 9",
+          "alias": "time1",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e998a3bb-39b3-41f1-bdef-f2bdf3b49716",
+      "data": [
+        {
+          "text": "I\u0027ll "
+        },
+        {
+          "text": "see",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Chris",
+          "alias": "persons",
+          "meta": "@persons",
+          "userDefined": true
+        },
+        {
+          "text": " later "
+        },
+        {
+          "text": "tonight",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1c4f1a1f-ca15-444a-b3c4-f551e7c7282f",
+      "data": [
+        {
+          "text": "Add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " some "
+        },
+        {
+          "text": "classes",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Friday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "evening at ten",
+          "alias": "time-period",
+          "meta": "@sys.time-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5fc254b1-dd81-432c-b92d-a16d3a490579",
+      "data": [
+        {
+          "text": "Add",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "morning at nine",
+          "alias": "time-period",
+          "meta": "@sys.time-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6daf75bb-3bf6-4ca5-b4dd-31040f1569c4",
+      "data": [
+        {
+          "text": "I have to "
+        },
+        {
+          "text": "go",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " to a "
+        },
+        {
+          "text": "meeting",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f034edcc-a86b-47ca-991b-66af2e57ae1e",
+      "data": [
+        {
+          "text": "I must "
+        },
+        {
+          "text": "attend",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "classes",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " every day of "
+        },
+        {
+          "text": "the week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2e555331-6dd8-4d64-b372-ab4d0a7cb215",
+      "data": [
+        {
+          "text": "I have to "
+        },
+        {
+          "text": "attend",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " a "
+        },
+        {
+          "text": "class",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0e0e3941-1fcc-43d3-a5bc-50160e6c5479",
+      "data": [
+        {
+          "text": "Another "
+        },
+        {
+          "text": "appointment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "showed up",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "ea712e23-6bc0-495a-9e7e-90561f7bed5b",
+      "data": [
+        {
+          "text": "They "
+        },
+        {
+          "text": "added",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " a "
+        },
+        {
+          "text": "lab",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on Friday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "at 6:30",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "880c93c5-671c-4133-9403-9a1b53dee3ee",
+      "data": [
+        {
+          "text": "I\u0027ll "
+        },
+        {
+          "text": "go out",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "George",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " later on"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "30162e7e-0591-4993-be61-84b774cb6452",
+      "data": [
+        {
+          "text": "We\u0027ll "
+        },
+        {
+          "text": "hang out",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " with "
+        },
+        {
+          "text": "the guys",
+          "alias": "persons",
+          "meta": "@persons",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on Saturday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "evening",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f9604360-701d-42f6-9572-b8583af9b8dd",
+      "data": [
+        {
+          "text": "I have a",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "class",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "at 8:30 in the morning",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3e99bddf-4e0b-4611-8b12-274926f28dc7",
+      "data": [
+        {
+          "text": "An "
+        },
+        {
+          "text": "appointment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " just happened "
+        },
+        {
+          "text": "yesterday",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "for tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "a5537819-2583-457c-adae-53ca09d89d99",
+      "data": [
+        {
+          "text": "Hey "
+        },
+        {
+          "text": "Linda",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": ", another "
+        },
+        {
+          "text": "assignment",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": false
+        },
+        {
+          "text": " just showed up for "
+        },
+        {
+          "text": "Saturday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": "."
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3fd73c23-d8f0-425b-81e0-9b0f625aa440",
+      "data": [
+        {
+          "text": "please "
+        },
+        {
+          "text": "put",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " an "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "at 2:30",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on Friday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "20483b3f-d076-4de9-bcc6-d15eb0329465",
+      "data": [
+        {
+          "text": "Linda",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": ", could you please "
+        },
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " another "
+        },
+        {
+          "text": "appointment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " for the net "
+        },
+        {
+          "text": "Sunday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d90392f7-0a4c-4c09-8331-3e46f05bb202",
+      "data": [
+        {
+          "text": "add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "subject",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "friday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7150f379-0e9e-420d-b9fb-db0ac93ed864",
+      "data": [
+        {
+          "text": "I have an",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "appointment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "Sunday, next week",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3cded5c3-a15e-464e-88c1-525ce776fc8a",
+      "data": [
+        {
+          "text": "Add",
+          "alias": "action",
+          "meta": "@action",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "81e16d39-1ff0-450b-bbca-97e0c5ba51b9",
+  "name": "Add Event",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "addEvent",
+      "affectedContexts": [
+        {
+          "name": "AddEvent-followup",
+          "parameters": {},
+          "lifespan": 2
+        },
+        {
+          "name": "adding-event",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.any",
+          "name": "any",
+          "value": "$any",
+          "isList": true
+        },
+        {
+          "required": true,
+          "dataType": "@eventType",
+          "name": "eventType",
+          "value": "$eventType",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@action",
+          "name": "action",
+          "value": "$action",
+          "prompts": [
+            "Could you be a little more clear with what I should do sir?"
+          ],
+          "isList": true
+        },
+        {
+          "dataType": "@sys.given-name",
+          "name": "given-name",
+          "value": "$given-name",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "isList": false
+        },
+        {
+          "dataType": "@persons",
+          "name": "persons",
+          "value": "$persons",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time-period",
+          "name": "time-period",
+          "value": "$time-period",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time1",
+          "value": "$time1",
+          "isList": false
+        },
+        {
+          "dataType": "@subject",
+          "name": "subject",
+          "value": "$subject",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Yes sir, I\u0027ll add the desired $eventType in your Schedule."
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

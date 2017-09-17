@@ -1,0 +1,43 @@
+{
+  "id": "9086966d-6381-4843-a3d2-cc1735b7d150",
+  "name": "action",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "action",
+      "synonyms": [
+        "assignment",
+        "assignments"
+      ]
+    },
+    {
+      "value": "Add",
+      "synonyms": [
+        "Add",
+        "add",
+        "I have an",
+        "put",
+        "showed up",
+        "have to go",
+        "set up",
+        "go"
+      ]
+    },
+    {
+      "value": "hang out",
+      "synonyms": [
+        "hang out",
+        "go out",
+        "see"
+      ]
+    },
+    {
+      "value": "attend",
+      "synonyms": [
+        "attend"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

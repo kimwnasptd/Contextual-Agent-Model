@@ -1,0 +1,68 @@
+{
+  "id": "5aff7a4a-caae-45f1-a916-00bd4d948814",
+  "name": "eventType",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "subject",
+      "synonyms": [
+        "subject"
+      ]
+    },
+    {
+      "value": "assignment",
+      "synonyms": [
+        "assignment",
+        "assignments",
+        "Assignment",
+        "Assignments"
+      ]
+    },
+    {
+      "value": "appointment",
+      "synonyms": [
+        "appointment",
+        "appointments",
+        "Appointment",
+        "Appointments"
+      ]
+    },
+    {
+      "value": "Study",
+      "synonyms": [
+        "Study",
+        "study"
+      ]
+    },
+    {
+      "value": "class",
+      "synonyms": [
+        "class",
+        "classes"
+      ]
+    },
+    {
+      "value": "lab",
+      "synonyms": [
+        "lab",
+        "Lab"
+      ]
+    },
+    {
+      "value": "meeting",
+      "synonyms": [
+        "meeting",
+        "meetings"
+      ]
+    },
+    {
+      "value": "exercise",
+      "synonyms": [
+        "exercise",
+        "exercises"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

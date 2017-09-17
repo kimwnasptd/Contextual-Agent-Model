@@ -1,0 +1,375 @@
+{
+  "userSays": [
+    {
+      "id": "a5be0307-6705-4145-9040-aa37825dc190",
+      "data": [
+        {
+          "text": "its for "
+        },
+        {
+          "text": "Tuesday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "863174ab-2cf6-44d6-8072-4edb3be64e07",
+      "data": [
+        {
+          "text": "it\u0027s for "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "eb3eb982-d386-4b93-abcd-f609fa2cc87f",
+      "data": [
+        {
+          "text": "it is for "
+        },
+        {
+          "text": "Monday",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4700757a-d9cd-4e91-a43a-c74ed5ea45f7",
+      "data": [
+        {
+          "text": "it is for "
+        },
+        {
+          "text": "next week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "716042d3-28be-4501-90dd-4636e01df63b",
+      "data": [
+        {
+          "text": "for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "morning at nine",
+          "alias": "time-period",
+          "meta": "@sys.time-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4c635591-c26c-49a3-8ebb-75c1880d43b7",
+      "data": [
+        {
+          "text": "from Friday next week to Sunday next week",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ab125a4d-c18d-49df-885d-f42bcae80b94",
+      "data": [
+        {
+          "text": "for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "morning",
+          "alias": "time-period",
+          "meta": "@sys.time-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c6fbd11c-9e95-4b61-b0fd-52d3f19a2f91",
+      "data": [
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1b9eb75a-3494-4bf1-8911-ddd6ae649919",
+      "data": [
+        {
+          "text": "oh right, an "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5a8520d3-78ca-4604-ba28-186a516a9ca6",
+      "data": [
+        {
+          "text": "It\u0027s an "
+        },
+        {
+          "text": "exercise",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "15ef828a-7e19-4844-bdd4-4a4638fc4550",
+      "data": [
+        {
+          "text": "Its for "
+        },
+        {
+          "text": "Sunday next evening",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d33b4c95-ae91-4674-b66a-84d51b7a0891",
+      "data": [
+        {
+          "text": "Its for "
+        },
+        {
+          "text": "tomorrow",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "80f92d1c-ac2e-4677-b45a-48ab1ce75cde",
+      "data": [
+        {
+          "text": "Lab",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        },
+        {
+          "text": " it is"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "796d7f61-0071-445e-83a4-622383f9d276",
+      "data": [
+        {
+          "text": "Already told you "
+        },
+        {
+          "text": "Linda",
+          "alias": "given-name",
+          "meta": "@sys.given-name",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4326b8bf-c6fd-44c8-94b6-7d627ca052e7",
+      "data": [
+        {
+          "text": "Come on how could you not hear that, I said "
+        },
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "dd49012b-23da-4c83-9c74-de0e1fad4570",
+      "data": [
+        {
+          "text": "I said "
+        },
+        {
+          "text": "classes",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2ab66737-eec1-470a-9496-0a366b4447b8",
+      "data": [
+        {
+          "text": "meeting",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c153a5af-6982-4c7b-9efb-8f6ed4e4fd03",
+      "data": [
+        {
+          "text": "assignment",
+          "alias": "eventType",
+          "meta": "@eventType",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "4915cee2-02da-417a-826e-55eb6a465ea9",
+  "name": "Information",
+  "auto": true,
+  "contexts": [
+    "adding-event",
+    "checking-events"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "adding-event",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "checking-events",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "dataType": "@eventType",
+          "name": "eventType",
+          "value": "$eventType",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.given-name",
+          "name": "given-name",
+          "value": "$given-name",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time-period",
+          "name": "time-period",
+          "value": "$time-period",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Thank you sir!"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

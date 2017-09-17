@@ -1,0 +1,67 @@
+{
+  "userSays": [
+    {
+      "id": "3e74e631-6a2e-40bf-ba35-3a875dfb2f70",
+      "data": [
+        {
+          "text": "please don\u0027t"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e69a8ecd-d138-4529-a90a-555be92ef7d5",
+      "data": [
+        {
+          "text": "no, don\u0027t do it"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e91717fb-6c2c-4e9a-a559-ff2c6ac15346",
+      "data": [
+        {
+          "text": "no, I don\u0027t want that"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "db9d8b08-c0c2-48cc-8999-e408f9eefbfe",
+      "data": [
+        {
+          "text": "NO"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "dc6ae197-ba83-4a38-a53d-63dfbf3f6a30",
+  "name": "Negative",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

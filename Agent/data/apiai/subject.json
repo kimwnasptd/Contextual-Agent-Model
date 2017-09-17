@@ -1,0 +1,81 @@
+{
+  "id": "4ab4475e-0f58-4473-9aef-fe779966dcd2",
+  "name": "subject",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "math",
+      "synonyms": [
+        "math"
+      ]
+    },
+    {
+      "value": "algebra",
+      "synonyms": [
+        "algebra"
+      ]
+    },
+    {
+      "value": "computer sciense",
+      "synonyms": [
+        "computer sciense"
+      ]
+    },
+    {
+      "value": "programming",
+      "synonyms": [
+        "programming"
+      ]
+    },
+    {
+      "value": "physics",
+      "synonyms": [
+        "physics"
+      ]
+    },
+    {
+      "value": "knowledge databases",
+      "synonyms": [
+        "knowledge databases"
+      ]
+    },
+    {
+      "value": "architecture",
+      "synonyms": [
+        "architecture"
+      ]
+    },
+    {
+      "value": "databases",
+      "synonyms": [
+        "databases"
+      ]
+    },
+    {
+      "value": "computer science",
+      "synonyms": [
+        "computer science"
+      ]
+    },
+    {
+      "value": "artificial intelligence",
+      "synonyms": [
+        "artificial intelligence"
+      ]
+    },
+    {
+      "value": "operating systems",
+      "synonyms": [
+        "operating systems"
+      ]
+    },
+    {
+      "value": "advanced physics",
+      "synonyms": [
+        "advanced physics"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

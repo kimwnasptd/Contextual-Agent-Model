@@ -1,0 +1,47 @@
+{
+  "userSays": [
+    {
+      "id": "82238724-6740-45d6-ae8e-429a3f1f64a0",
+      "data": [
+        {
+          "text": "what are you doing now"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "64038a21-f94a-4e69-85c9-faf9f93e563b",
+      "data": [
+        {
+          "text": "What are you doing right now?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "33824a9a-d04e-4a4b-9f0e-e5db7fcfa688",
+  "name": "Check Current State",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

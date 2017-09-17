@@ -1,0 +1,57 @@
+{
+  "id": "503a8195-5f55-4575-9d1e-3cbe725beedd",
+  "name": "persons",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "me",
+      "synonyms": [
+        "me"
+      ]
+    },
+    {
+      "value": "the guys",
+      "synonyms": [
+        "the guys"
+      ]
+    },
+    {
+      "value": "Chris",
+      "synonyms": [
+        "Chris"
+      ]
+    },
+    {
+      "value": "Kostas",
+      "synonyms": [
+        "Kostas"
+      ]
+    },
+    {
+      "value": "Aggelos",
+      "synonyms": [
+        "Aggelos"
+      ]
+    },
+    {
+      "value": "Nikos",
+      "synonyms": [
+        "Nikos"
+      ]
+    },
+    {
+      "value": "Vagos",
+      "synonyms": [
+        "Vagos"
+      ]
+    },
+    {
+      "value": "Manoli",
+      "synonyms": [
+        "Manoli"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
