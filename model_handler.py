@@ -7,9 +7,11 @@ import random
 from datetime import datetime, timedelta
 from rasa_nlu.model import Metadata, Interpreter
 from rasa_nlu.config import RasaNLUConfig
+from structures.custom_structs import LastUpdatedOrderedDict
 
 MODEL_DIR = "Agent/models/linda_001"
 CONFIG_DIR = "Agent/config_spacy.json"
+SIMILARITY_THRESHOLD = 0.1
 
 
 # Parameters: { eventType : assignment,classes,appointment
@@ -48,7 +50,7 @@ def cleanParameters(parameters):
 
 def reformResult(prediction, request_num):
     # Used to cleanup the result
-    # Result = {"intents": {'':''}, "parameters": {'':''}, "text": {'':''}
+    # Result = {'intent': {'':''}, "parameters": {'':''}, "text": {'':''}
     #print(json.dumps(prediction, indent=4, sort_keys=True))
 
     parameters = {}
@@ -73,7 +75,8 @@ def reformResult(prediction, request_num):
     parameters = cleanParameters(parameters)
 
     result = {}
-    result["intents"] = prediction["intent"]
+    result['intent'] = prediction["intent"]
+    result["intent_ranking"] = prediction["intent_ranking"]
     result["parameters"] = parameters
     result["text"] = prediction["text"]
     result['time_created'] = datetime.now()
@@ -95,6 +98,7 @@ def get_parameters_list(sentence):
         in the response sentense'''
     default_parameters = ['$eventType','$DATE','$action','$date-period','$people','$time',
                           '$time-from','$time-to']
+    default_parameters += ['$context-'+x[1:] for x in default_parameters]
 
     found_parameters = []
     for parameter in default_parameters:
@@ -142,6 +146,7 @@ def all_parameters_found(intent, analyzed_text):
 class AgentModel():
 
     modelInterpreter = None
+    similarity_threshold = 0.1
 
     intents_info = {}
     contexts_info = {}
@@ -151,7 +156,7 @@ class AgentModel():
     incomplete_intents_stack = []
     requests_num = {}
 
-    def __init__(self, model_dir=MODEL_DIR, conf_file=CONFIG_DIR):
+    def __init__(self, sim_thr=SIMILARITY_THRESHOLD, model_dir=MODEL_DIR, conf_file=CONFIG_DIR):
         # Takes some time,to initialize
 
         from data.intents import INTENTS
@@ -160,6 +165,8 @@ class AgentModel():
         self.contexts_info = CONTEXTS
         from data.fallback import RESPONSES
         self.fallback_responses = RESPONSES
+
+        self.similarity_threshold = sim_thr
 
         print("Initializing the model...")
 
@@ -171,7 +178,54 @@ class AgentModel():
 
         self.modelInterpreter = interpreter
 
-    def handle_user_request(self, user_id):
+    def handle_rasa_prediction(self, input_text, user_id):
+        ''' This is the part were RasaNLU is used. After getting the results from
+            RasaModel the filtering of the parameters/entities/intents is done here '''
+
+        result = self.modelInterpreter.parse(input_text)
+        result = reformResult(result, self.requests_num[user_id])
+
+        ''' If there are intents similar to the one predicted,
+            then chose the intent that is not out of context '''
+
+        intent_ranking = result['intent_ranking']
+        highest_confidence = intent_ranking[0]['confidence']
+
+        print([x['name'] for x in intent_ranking])
+        print([x['confidence'] for x in intent_ranking])
+        print("")
+
+        # No need any more for intent ranking
+        del result['intent_ranking']
+
+        # Get list of active Contexts in order of insertion
+        active_contexts = [x[0] for x in self.get_active_contexts(user_id)]
+
+        for context in active_contexts:
+
+            # Loop through the Intents that were predicted and keep
+            # the first intent that is in Context with the most recent context
+            for intent in intent_ranking:
+
+                # If intent's confidence differs more than the similarity_threshold
+                # from the first intent then don't look the other intents for the
+                # specific context
+                if highest_confidence - intent['confidence'] > self.similarity_threshold:
+                    break
+
+                intent_data = self.intents_info[intent['name']]
+                # Pick the first Intent you find that is in Context
+                # and if it needs the most recent context
+                if not self.out_of_context(intent_data, user_id) \
+                   and (context in intent_data['context_needed'] or not intent_data['context_needed']):
+
+                    result['intent'] = intent
+                    return result
+
+        # If all the near intents are out of context the keep the first one
+        return result
+
+    def check_entries_and_request_num(self, user_id):
         ''' Misleading name, checks if the needed dicts have entries
             for the given user_id. Also handles the request_num '''
 
@@ -179,7 +233,7 @@ class AgentModel():
         if user_id not in self.requests_num:
             self.requests_num[user_id] = 0
         if user_id not in self.active_contexts:
-            self.active_contexts[user_id] = {}
+            self.active_contexts[user_id] = LastUpdatedOrderedDict()
 
         # If there are no active contexts then reset the requests_num counter
         if not self.active_contexts[user_id]:
@@ -188,6 +242,22 @@ class AgentModel():
         # Increase the requests_num counnter
         self.requests_num[user_id] += 1
 
+    def set_active_context(self, context_name, context_content, user_id):
+        ''' This is function determines how a new context is set
+            when an intent has all its parameters'''
+
+        self.active_contexts[user_id][context_name] = context_content
+
+        # Since a new context was added, update the "active_contexts" entry
+        self.assign_active_contexts(user_id)
+
+    def get_active_contexts(self, user_id):
+        ''' Get a list of tuples (context_name, context_content)
+            with the currently active contexts. Last add context will
+            be first on the list
+            [)"Add-Intent", { })]'''
+        return list(reversed(self.active_contexts[user_id].items()))
+
     def assign_active_contexts(self, user_id):
         ''' Updates the "active_contexts" entry in all active contexts '''
         active_contexts = list(self.active_contexts[user_id].keys())
@@ -195,8 +265,24 @@ class AgentModel():
         for context in self.active_contexts[user_id]:
             self.active_contexts[user_id][context]["active_contexts"] = active_contexts
 
+    def assign_context_parameters(self, prediction, user_id):
+        ''' Put the 'context_parameters' entry on the prediction
+            which holds the parameters of the intent's needed context
+            (the one the intent is applied to)'''
+
+        intent = self.intents_info[prediction['intent']['name']]
+
+        # Put the needed context's parameters to the intent
+        for context in self.get_active_contexts(user_id):
+            if context[0] in intent['context_needed']:
+                for parameter in context[1]['parameters']:
+                    prediction['parameters']['context-'+parameter] = context[1]['parameters'][parameter]
+
+        return prediction
+
     def update_active_contexts(self, user_id):
-        ''' '''
+        ''' Updates the Currently Active Contexts and keeps
+            the IIS up to date'''
 
         is_intent = False
 
@@ -236,10 +322,34 @@ class AgentModel():
             if not self.active_contexts[user_id]:
                 self.requests_num[user_id] = 1
 
+    def out_of_context(self, intent, user_id):
+        ''' Returns True if given intent IS OUT of Context'''
+        if intent['tag'] == 'Information' or intent['tag'] == 'Cancel':
+            # Information/Cancel Intent is out of Context if there are no elements in IIS
+            if not self.incomplete_intents_stack:
+                return True
+            return False
+
+        else:
+            # If intent has no needed contexts then it is in context
+            if not intent['context_needed']:
+                return False
+
+            for needed_context in intent['context_needed']:
+                if needed_context in self.active_contexts[user_id]:
+                    return False
+
+            return True
+
     def apply_intent_action(self, intent, analyzed_text, user_id):
         ''' This is the part were the 'fullfillment is happening.
             If an Intent has needed parameters or needs to do a webhook
             this is were it is implemented. Currently no webhooks '''
+
+        # Cancel Action is embeded with the core logic. Not advised to edit this code
+        if intent['tag'] == 'Cancel':
+            # Remove the first entry (most recent incomplete intent) from IIS
+            del self.incomplete_intents_stack[0]
 
         # Information Action is embeded with the core logic. Not advised to edit this code
         if intent['tag'] == 'Information':
@@ -263,7 +373,7 @@ class AgentModel():
             request_index = -1
 
             for request in self.incomplete_intents_stack:
-                incomplete_intent = self.intents_info[request['intents']['name']]
+                incomplete_intent = self.intents_info[request['intent']['name']]
                 if all_parameters_found(incomplete_intent, request):
                     request_index = self.incomplete_intents_stack.index(request)
                     break
@@ -272,7 +382,7 @@ class AgentModel():
             if request_index != -1:
 
                 ready_request = self.incomplete_intents_stack[request_index]
-                new_intent = self.intents_info[ready_request['intents']['name']]
+                new_intent = self.intents_info[ready_request['intent']['name']]
 
                 # Remove the request from the IIS and clear the "Intent - Parameters" context
                 del self.incomplete_intents_stack[request_index]
@@ -280,17 +390,13 @@ class AgentModel():
 
                 # Set the context
                 if 'context_set' in new_intent:
-                    self.active_contexts[user_id][new_intent['context_set']] = ready_request
-
-                    # Since a new context was added, update the "active_contexts" entry
-                    self.assign_active_contexts(user_id)
-                    print(list(self.active_contexts.keys()))
+                    self.set_active_context(new_intent['context_set'], ready_request, user_id)
 
                 # Apply the action for the completed intent
                 ready_request = self.apply_intent_action(new_intent, ready_request, user_id)
 
                 # Add the Information Intents' info to the completed Intent
-                ready_request['information_intent'] = analyzed_text['intents']
+                ready_request['information_intent'] = analyzed_text['intent']
 
                 # Get the response for the completed Intent
                 ready_request['response'] = self.get_intent_response(new_intent, ready_request)
@@ -302,7 +408,7 @@ class AgentModel():
                 # *If Information Intent is processed that means IIS is not empty (Else Info would be out of context)
 
                 request = self.incomplete_intents_stack[0]
-                new_intent = self.intents_info[request['intents']['name']]
+                new_intent = self.intents_info[request['intent']['name']]
 
                 for parameter in new_intent['parameters']:
                     if parameter not in request['parameters']:
@@ -325,58 +431,40 @@ class AgentModel():
 
         return response
 
-    def out_of_context(self, intent, user_id):
-        ''' Returns True if given intent IS OUT of Context'''
-        if intent['tag'] == 'Information':
-
-            # Information Intent is out of Context if there are no elements in IIS
-            if not self.incomplete_intents_stack:
-                return True
-        else:
-            # If intent has no needed contexts then it is in context
-            if not intent['context_needed']:
-                return False
-
-            for needed_context in intent['context_needed']:
-                if needed_context in self.active_contexts[user_id]:
-                    return False
-
-            return True
-
     def getResponse(self, input_text, user_id='kimonas'):
 
-        # Makes sure the user_id exists and updates the requests_num
-        self.handle_user_request(user_id)
+        # Makes sure the user_id entries exists and updates the requests_num
+        self.check_entries_and_request_num(user_id)
 
         # Update the Active Contexts and the Incomplete Intents Stack
         self.update_active_contexts(user_id)
 
-        analyzed_text = self.modelInterpreter.parse(input_text)
-        analyzed_text = reformResult(analyzed_text, self.requests_num[user_id])
+        analyzed_text = self.handle_rasa_prediction(input_text, user_id)
+        # Add the 'active_contexts' entry
+        analyzed_text['active_contexts'] = [x[0] for x in list(self.get_active_contexts(user_id))]
 
         # Info of the given Intent
-        intent = self.intents_info[analyzed_text['intents']['name']]
+        intent = self.intents_info[analyzed_text['intent']['name']]
 
         # Check if the given intent is out of context
         if self.out_of_context(intent, user_id):
             # Go to Fallback responses
             response = select_sentence({}, self.fallback_responses)
             analyzed_text['response'] = response
-            analyzed_text['active_contexts'] = list(self.active_contexts[user_id])
             return analyzed_text
 
         # In Context
         else:
+            # Add the needed context's parameters to the intent
+            analyzed_text = self.assign_context_parameters(analyzed_text, user_id)
+
             # Context complete
             if all_parameters_found(intent, analyzed_text):
                 # All the needed parameters were provided
 
                 # Set the context, if the intent sets one
                 if "context_set" in intent:
-                    self.active_contexts[user_id][intent["context_set"]] = analyzed_text
-
-                    # Since a new context was added, update the "active_contexts" entry
-                    self.assign_active_contexts(user_id)
+                    self.set_active_context(intent['context_set'], analyzed_text, user_id)
 
                 # Apply the action for the specific intent
                 analyzed_text = self.apply_intent_action(intent, analyzed_text, user_id)
@@ -428,7 +516,7 @@ if __name__ == "__main__":
     #model.printPrediction(sys.argv[1])
 
     while True:
-        print('Text: ', end='')
+        print('Text >> ', end='')
         input_text = input()
 
         if input_text == 'exit':
