@@ -1,12 +1,9 @@
 # This is the Contexts Map
 
+# 'Context-Name: {
+#	'lifespan' : [2,5]
+#	}
+
 CONTEXTS = {
-    'Adding-Event' : {
-        'lifespan' : [2, 5]
-    },
-
-    'Checking-the-Schedule' : {
-        'lifespan' : [5, 5]
-    },
-
+    
 }

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "be3ed91b-7324-4c59-986e-5142e2ec2003",
+    "data": [
+      {
+        "text": "please don\u0027t",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "086d0b60-a0d2-436f-94d9-aaaffdfce2da",
+    "data": [
+      {
+        "text": "no, don\u0027t do it",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "237ff0d5-8753-4088-871b-fe8213352f61",
+    "data": [
+      {
+        "text": "no, I don\u0027t want that",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a073bae5-2d46-43d7-a932-51944b8b091c",
+    "data": [
+      {
+        "text": "NO",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  }
+]
